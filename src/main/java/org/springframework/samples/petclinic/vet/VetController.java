@@ -75,4 +75,14 @@ class VetController {
 		return vets;
 	}
 
+	@RestController
+    public class DemoController {
+
+		@GetMapping("/test")
+		public String test() {
+			String password = "admin123"; // ❌ vulnerability
+			return "Test";
+		}
+	}		
+    }
 }
